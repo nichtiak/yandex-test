@@ -20,8 +20,6 @@ if (screenWidth >= 1366) {
   sliderPlace.style.left = '-' + (20 + widthOffset) + 'px'; // сдвиг влево с позиционированием
 
 
-  console.log("десктоп "+sliderPlace)
-
   const initSlider = () => {
     sliderPlace.append(items[activeItem])
     items[activeItem].style.display = 'inline-block'
@@ -50,7 +48,6 @@ if (screenWidth >= 1366) {
     activeItem++
     if (activeItem >= items.length) activeItem = 0;
     document.querySelector('.slider-line div').remove()
-    console.log(activeItem)
     nextItemGenerate()
   }
 
@@ -58,7 +55,6 @@ if (screenWidth >= 1366) {
     activeItem--;
     if (activeItem < 0) activeItem = items.length - 1;
     document.querySelector('.slider-line div:last-child').remove() // для десктопа
-    console.log(activeItem)
     prevItemGenerate()
   }
   setInterval(() => {
@@ -151,7 +147,6 @@ function transferData () {
     // Перелистываем слайд вперёд
     function nextSlide() {
       sliderCount++;
-      console.log("next" + sliderCount)
       checkSliderCount()
       rollSlider()
       thisSlide(sliderCount)
@@ -231,7 +226,6 @@ function transferData () {
       activeItem++
       if (activeItem >= items.length) activeItem = 0;
       document.querySelector('.slider-line div').remove()
-      console.log(activeItem)
       nextItemGenerate()
     }
     
@@ -239,7 +233,6 @@ function transferData () {
       activeItem--;
       if (activeItem < 0) activeItem = items.length - 1;
       document.querySelector('.slider-line div').remove() // для мобильной версии
-      console.log(activeItem)
       prevItemGenerate()
     }
     setInterval(() => {
