@@ -168,8 +168,8 @@ header {
 @media (max-width: 1365px) {
   .main-img {
     /* background: 
-    url(/img/layer2.jpeg)repeat center 0,
-    url(/img/layer3.png)no-repeat center 400px,
+    url(../img/layer2.jpeg)repeat center 0,
+    url(../img/layer3.png)no-repeat center 400px,
     rgb(233, 222, 212);
     background-blend-mode: color-burn, normal, normal; */
     background-image: none;
@@ -335,7 +335,7 @@ header {
   font-size: 36px;
   /* font-weight: 700; */
   line-height: 137%;
-  /* background: url(/img/people.png) no-repeat right top; */
+  /* background: url(../img/people.png) no-repeat right top; */
   background-size: 100%;
 }
 .lecture-title {
@@ -932,8 +932,9 @@ pre {
   }
 }
 footer {
+  display: flex;
+  justify-content: center;
   padding-top: 40px;
-  padding-left: 72px;
   color: rgb(49, 49, 49);
   font-family: "Golos Text";
   font-size: 16px;
@@ -945,7 +946,10 @@ footer {
 @media screen and (max-width: 1365px) {
   footer {
     height: 252px;
-    padding-top: 40px;
-    padding-left: 20px;
-  } 
+    padding-top: 41px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  
 }
